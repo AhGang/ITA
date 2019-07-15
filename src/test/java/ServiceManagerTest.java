@@ -134,11 +134,10 @@ public class ServiceManagerTest {
         //Given
         Car car = new Car();
         ParkingBoy parkingBoy = new ParkingBoy();
-        ParkingLot parkingLot = new ParkingLot(10);
+        ParkingLot parkingLot = new ParkingLot(10,10);
         ServiceManager serviceManager = new ServiceManager();
 
         //When
-        parkingLot.setParkedCarCount(10);
         parkingLot.isCapacityFulled();
         parkingBoy.checkParkingLotStatus(parkingLot);
         parkingBoy.passErrorMsgToManager(parkingBoy.getErrorMsg(),serviceManager);

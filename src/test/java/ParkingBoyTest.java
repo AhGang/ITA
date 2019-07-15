@@ -76,10 +76,9 @@ public class ParkingBoyTest {
     void should_not_park_a_car_when_parking_lot_have_no_position() {
         //Given
         ParkingBoy parkingBoy = new ParkingBoy();
-        ParkingLot parkingLot = new ParkingLot(10);
+        ParkingLot parkingLot = new ParkingLot(10,10);
         Car car = new Car();
         //When
-        parkingLot.setParkedCarCount(10);
         boolean isCapacityFulled = parkingLot.isCapacityFulled();
         // Then
         Assertions.assertEquals(null,isCapacityFulled?null:parkingBoy.parkACar(car));

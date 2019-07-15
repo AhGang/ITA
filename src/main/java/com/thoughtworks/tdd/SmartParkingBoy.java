@@ -18,8 +18,8 @@ public class SmartParkingBoy extends ParkingBoy {
                 }
             }
             if(valueTemp > 0){
-                this.getParkingLotList().get(keyTemp).setParkedCarCount(1);
-                this.getParkingLotList().get(keyTemp).setRemainingCount(1);
+                this.getParkingLotList().get(keyTemp).setParkedCarCount();
+                this.getParkingLotList().get(keyTemp).setRemainingCount();
                 this.parkACar(carList.get(j));
             }else{
                 this.checkParkingLotStatus(getParkingLotList().get(keyTemp));

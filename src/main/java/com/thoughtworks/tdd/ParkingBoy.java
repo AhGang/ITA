@@ -64,8 +64,8 @@ public class ParkingBoy {
         for(int j = 0; j < countOfCar;j++) {
             for(int i = 0 ;i < parkingLotList.size();i++ ){
                  if (parkingLotList.get(i).getRemainingCount() > 0){
-                    parkingLotList.get(i).setParkedCarCount(1);
-                    parkingLotList.get(i).setRemainingCount(1);
+                    parkingLotList.get(i).setParkedCarCount();
+                    parkingLotList.get(i).setRemainingCount();
                     this.parkACar(carList.get(j));
                     break;
                 }
