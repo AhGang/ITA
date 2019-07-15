@@ -30,8 +30,9 @@ public class ParkingBoy {
     public void setErrorMsg(String errorMsg) {
         ErrorMsg = errorMsg;
     }
+
     public Ticket parkACar(Car car) {
-        ParkingLot parkingLot = findParkAbleLot();
+        ParkingLot parkingLot = findAbleParkingLot();
         if(car.isParked()){
             throw new RuntimeException();
         }else if(car == null){
@@ -114,7 +115,7 @@ public class ParkingBoy {
     public void passErrorMsgToManager(String errorMsg, ServiceManager serviceManager) {
         serviceManager.setErrorMsg(errorMsg);
     }
-    public ParkingLot findParkAbleLot() {
+    public ParkingLot findAbleParkingLot() {
         for(ParkingLot parkingLot : parkingLotList) {
             if (!parkingLot.isFull()) {
                 return parkingLot;
