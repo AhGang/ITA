@@ -6,7 +6,6 @@ import java.util.List;
 public class ParkingLot {
     int capacity;
     int parkedCarCount;
-    int remainingCount;
     boolean isFulled = false;
     private ArrayList<Car> carList;
 
@@ -21,16 +20,11 @@ public class ParkingLot {
     public ParkingLot(int capacity, int parkedCarCount) {
         this.capacity = capacity;
         this.parkedCarCount = parkedCarCount;
-        this.remainingCount = capacity;
         this.carList = new ArrayList<>();
     }
 
     public int getRemainingCount() {
-        return remainingCount;
-    }
-
-    public void setRemainingCount() {
-        this.remainingCount --;
+        return capacity -  parkedCarCount;
     }
 
     public int getCapacity() {
