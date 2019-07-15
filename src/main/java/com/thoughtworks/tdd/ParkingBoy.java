@@ -23,16 +23,6 @@ public class ParkingBoy {
         this.parkingLotList = parkingLotList;
     }
 
-
-    public Ticket getTicket() {
-        return ticket;
-    }
-
-    public void setTicket(Ticket ticket) {
-        this.ticket = ticket;
-    }
-
-
     public String getErrorMsg() {
         return ErrorMsg;
     }
@@ -52,7 +42,6 @@ public class ParkingBoy {
         }
     }
 
-
     public Car fetchACar(Ticket ticket) {
         if (ticket == null) {
             this.setErrorMsg( "Please provide your parking ticket.");
@@ -69,7 +58,6 @@ public class ParkingBoy {
         this.setErrorMsg("Unrecognized parking ticket.");
         return null;
     }
-
 
     public Car fetchACorrespondCar(Ticket ticket) {
         for (ParkingLot parkingLot : parkingLotList) {
@@ -103,9 +91,6 @@ public class ParkingBoy {
         return ParkingLot.getTickets(carList);
     }
 
-    public boolean useCorrespondTicket(ArrayList<Ticket> ticketList) {
-        return true;
-    }
 
     public boolean checkTicket(Ticket ticket) {
         if(ticket == null){

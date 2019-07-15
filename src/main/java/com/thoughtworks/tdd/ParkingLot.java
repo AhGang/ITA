@@ -24,11 +24,6 @@ public class ParkingLot {
         this.remainingCount = capacity;
         this.carList = new ArrayList<>();
     }
-    public ParkingLot(int capacity, int parkedCarCount, boolean isFulled) {
-        this.capacity = capacity;
-        this.parkedCarCount = parkedCarCount;
-        this.isFulled = isFulled;
-    }
 
     public int getRemainingCount() {
         return remainingCount;
@@ -42,9 +37,6 @@ public class ParkingLot {
         return capacity;
     }
 
-    public void setCapacity(int capacity) {
-        this.capacity = capacity;
-    }
     public int getParkedCarCount() {
         return parkedCarCount;
     }
@@ -59,10 +51,6 @@ public class ParkingLot {
 
     public static Ticket getATicket() {
         return new Ticket(false,true);
-    }
-
-    public static Car returnACar() {
-        return new Car();
     }
 
     public static ArrayList<Ticket> getTickets(ArrayList<Car> carList) {

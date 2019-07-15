@@ -7,10 +7,6 @@ public class Car {
     public Car() {
     }
 
-    public Car(boolean isParked) {
-        this.isParked = isParked;
-    }
-
     public boolean isParked() {
         return isParked;
     }

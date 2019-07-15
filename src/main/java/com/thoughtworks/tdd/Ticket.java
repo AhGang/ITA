@@ -19,18 +19,9 @@ public class Ticket {
         return isUsed;
     }
 
-    public void setUsed(boolean used) {
-        isUsed = used;
-    }
-
     public boolean isProvided() {
         return isProvided;
     }
-
-    public void setProvided(boolean provided) {
-        isProvided = provided;
-    }
-
 
     public int getCode() {
         return code;

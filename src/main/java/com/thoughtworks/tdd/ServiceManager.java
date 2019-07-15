@@ -6,10 +6,6 @@ public class ServiceManager extends ParkingBoy {
     private ArrayList<ParkingBoy> manageList;
     private String errorMsg;
 
-    public ArrayList<ParkingBoy> getManageList() {
-        return manageList;
-    }
-
     public void setManageList(ArrayList<ParkingBoy> manageList) {
         this.manageList = manageList;
     }

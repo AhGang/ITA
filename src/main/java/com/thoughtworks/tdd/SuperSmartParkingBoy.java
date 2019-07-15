@@ -12,8 +12,8 @@ public class SuperSmartParkingBoy extends ParkingBoy {
             for(int j = 0; j < countOfCar;j++) {
                 valueTemp = 0;
                 for (int i = 0; i < this.getParkingLotList().size(); i++) {
-                    if(valueTemp < (double) (this.getParkingLotList().get(i).getRemainingCount()*1.0 / this.getParkingLotList().get(i).getCapacity())){
-                        valueTemp = (double) (this.getParkingLotList().get(i).getRemainingCount() *1.0 / this.getParkingLotList().get(i).getCapacity());
+                    if(valueTemp < (this.getParkingLotList().get(i).getRemainingCount()*1.0 / this.getParkingLotList().get(i).getCapacity())){
+                        valueTemp = (this.getParkingLotList().get(i).getRemainingCount() *1.0 / this.getParkingLotList().get(i).getCapacity());
                         keyTemp = i;
                     }
                 }
