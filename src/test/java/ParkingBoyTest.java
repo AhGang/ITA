@@ -44,8 +44,8 @@ public class ParkingBoyTest {
         Ticket ticketA = parkingBoy.parkACar(carA);
         Ticket ticketB = parkingBoy.parkACar(carB);
         //When
-        Car carAA = parkingBoy.fetchACorrespondCar(ticketA);
-        Car carBB = parkingBoy.fetchACorrespondCar(ticketB);
+        Car carAA = parkingBoy.fetchACar(ticketA);
+        Car carBB = parkingBoy.fetchACar(ticketB);
         // Then
         Assertions.assertEquals(carA,carAA);
         Assertions.assertEquals(carB,carBB);

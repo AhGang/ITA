@@ -59,20 +59,6 @@ public class ParkingBoy {
         return null;
     }
 
-    public Car fetchACorrespondCar(Ticket ticket) {
-        for (ParkingLot parkingLot : parkingLotList) {
-            for (Car car : parkingLot.getCars()) {
-                if (car.hashCode() == ticket.getCode()) {
-                    parkingLot.removeCar(car);
-                    return car;
-                }
-            }
-        }
-        ErrorMsg = "Unrecognized parking ticket.";
-        return null;
-
-    }
-
     public ArrayList<Ticket> parkMultiplyCars(ArrayList<Car> carList) {
         int countOfCar = carList.size();
         for(int j = 0; j < countOfCar;j++) {
